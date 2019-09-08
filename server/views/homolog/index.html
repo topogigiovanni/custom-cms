@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Mailbiz Integration -  Homologação</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+ <div class="container">
+
+   <h1 class="my-4">Mailbiz
+    <small>Homologação</small>
+  </h1>
+
+  <script>
+  window.onSubmit = function(e) {
+    e.preventDefault();
+    console.log('submit', e);
+    return false;
+  };
+  </script>
+
+  <form onsubmit="return false" class="newsletter form-horizontal">
+    <small>Formulário normal</small>
+    <div class="form-group">
+     <label for="name" class="col-sm-2 control-label">
+     Name</label>
+
+     <div class="col-sm-6">
+       <input placeholder="Enter Name..." type="text" class="form-control">
+
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="email" class="col-sm-2 control-label">
+     Email</label>
+
+     <div class="col-sm-6">
+       <input placeholder="Enter Email..." type="email" class="form-control">
+
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="message" class="col-sm-2 control-label">
+     Comment</label>
+
+     <div class="col-sm-6">
+       <textarea placeholder="Enter Comments..." class="form-control">
+       </textarea>
+
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="website" class="col-sm-2 control-label">
+     Development Languages...</label>
+
+     <div class="col-sm-6">
+       <label class="checkbox-inline">
+         <input type="checkbox" value="option1">
+       HTML </label> <label class="checkbox-inline"> <input type="checkbox" value="option2">
+       Javascript </label> <label class="checkbox-inline"> <input type="checkbox" value="option3">
+       CSS </label>
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="how-hear" class="col-sm-2 control-label">
+     How did you hear...</label>
+
+     <div class="col-sm-6">
+       <label class="radio-inline">
+         <input name="howHear" type="radio" value="option1">
+       Retail </label> <label class="radio-inline"> <input name="howHear" type="radio" value="option2">
+       Phone Call </label> <label class="radio-inline"> <input name="howHear" type="radio" value="option3">
+       Website </label>
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="city" class="col-sm-2 control-label">
+     City</label>
+
+     <div class="col-sm-6">
+       <select class="form-control">
+        <option>Seattle</option>
+        <option>Acre</option>
+
+      </select>
+    </div>
+  </div>
+
+  <div class="col-sm-6 text-center">
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </div>
+</div>
+</form>
+
+</div>
+
+<script>
+
+// (function(m, a, i, l, b, z, j, s) {
+//   m['MailbizIntegration'] = {
+//     id: b,
+//     ready: 0,
+//     debug: true,
+//   };
+//   z = a.createElement(i);
+//   j = a.getElementsByTagName(i)[0];
+//   z.async = 1;
+//   z.src = l;
+//   j.parentNode.insertBefore(z, j);
+// })(window, document, 'script', 'http://localhost:3000/static/scripts/integration.js', '5d65e885c573f146940f64a5');
+
+(function(m, a, i, l, b, z, j, s) {
+  m['MailbizIntegration'] = {
+    id: b,
+    ready: 0,
+    debug: true
+  };
+  z = a.createElement(i);
+  j = a.getElementsByTagName(i)[0];
+  z.async = 1;
+  z.src = l;
+  j.parentNode.insertBefore(z, j);
+})(window, document, 'script', 'https://integration-hub.mailclick.me/static/scripts/integration.min.js', '5d685749dc166b704d262ef4');
+
+
+</script>
+</body>
+
+</html>
