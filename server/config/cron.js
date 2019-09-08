@@ -1,5 +1,4 @@
 const CronJob = require('cron').CronJob;
-const integrationService = require('../server/integration/integration.service');
 const config = require('./config');
 
 const cronService = {
@@ -8,7 +7,6 @@ const cronService = {
       '0 * * * *', // a cada hora
       // '* * * * *', // a cada minuto
       () => {
-        integrationService.checkIntegrationsStatus();
       },
       null,
       true,
