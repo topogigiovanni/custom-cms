@@ -47,6 +47,33 @@ const ExtraFieldSchema = new mongoose.Schema({
   }
 });
 
+const PlatformSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  formSelector: {
+    type: String
+  },
+  emailSelector: {
+    type: String
+  },
+  nameSelector: {
+    type: String
+  },
+  radioSelector: {
+    type: String
+  },
+  submitSelector: {
+    type: String
+  },
+  useScript: {
+  type: Boolean
+  }
+}, {
+  timestamps: true
+});
+
 // const Question = mongoose.model( 'Question', questionSchema );
 ////////
 
@@ -98,18 +125,19 @@ const modelResolver = {
       });
     }
 
-    // const qSchema = schemaHelper.stringify(ExtraFieldSchema);
+    // const qSchema = schemaHelper.stringify(PlatformSchema);
     // debugger;
     // l('qSchema', qSchema);
     // const rev = schemaHelper.parse(qSchema);
     // l('rev', rev);
 
     // const saveMsg = {
-    //   name: 'ExtraFieldSchema',
+    //   name: 'Platform',
     //   //id: 'extra-field',
-    //   urlPattern: 'extra-field',
-    //   collectionName: 'ExtraFieldSchema',
-    //   data: qSchema
+    //   urlPattern: 'platform',
+    //   collectionName: 'Platform',
+    //   data: qSchema,
+    //   timestamps: true
     // };
 
     // const resp = await service.saveEntity(saveMsg);

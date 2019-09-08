@@ -23,7 +23,10 @@ EntitySchema = new mongoose.Schema({
     required: true,
     unique: true
   },
-  data: Object
+  data: Object,
+  timestamps: {
+    type: Boolean
+  }
 });
 
 EntitySchema.plugin(mongoosePaginate);
